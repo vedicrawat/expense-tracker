@@ -156,8 +156,9 @@ useEffect(() => {
             </div>
 
             <div className="card">
-              <p className="card-title">Summary</p>
-              <SummaryPanel summary={summary} />
+                <p className="card-title">Summary</p>
+                <SummaryPanel summary={summary} />
+                <BudgetPanel perCategory={summary?.perCategory} />
             </div>
           </aside>
 
