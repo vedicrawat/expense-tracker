@@ -6,6 +6,7 @@ import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
 import SummaryPanel from './components/SummaryPanel';
 import { EditModal, DeleteModal } from './components/Modals';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -239,6 +240,7 @@ useEffect(() => {
         onClose={() => setDeleteExpense(null)}
         loading={formLoading}
       />
+      <Analytics />
     </>
   );
 }
