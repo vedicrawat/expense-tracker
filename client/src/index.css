@@ -237,3 +237,30 @@ h1, h2, h3 { line-height: 1.2; }
   margin-bottom: 14px;
   font-size: 0.88rem;
 }
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .summary-stat {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .filters select,
+[data-theme="dark"] .filters input {
+  background: #1e293b;
+  color: #f1f5f9;
+}

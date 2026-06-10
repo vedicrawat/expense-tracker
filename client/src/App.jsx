@@ -6,6 +6,13 @@ import ExpenseList from './components/ExpenseList';
 import SummaryPanel from './components/SummaryPanel';
 import { EditModal, DeleteModal } from './components/Modals';
 
+const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark');
+
+useEffect(() => {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}, [dark]);
+
 const RANGE_PRESETS = [
   { label: 'All Time', value: 'all' },
   { label: 'This Month', value: 'this_month' },
@@ -123,11 +130,19 @@ export default function App() {
   return (
     <>
       <header className="header">
-        <div className="container">
-          <h1>💸 Expense Tracker</h1>
-          <p>Track your daily spending across categories</p>
-        </div>
-      </header>
+  <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <div>
+      <h1>💸 Expense Tracker</h1>
+      <p>Track your daily spending across categories</p>
+    </div>
+    <button
+      onClick={() => setDark(d => !d)}
+      style={{ background: 'rgba(255,255,255,0.15)', border: 'none', borderRadius: 8, padding: '8px 14px', color: '#fff', cursor: 'pointer', fontSize: '1.1rem' }}
+    >
+      {dark ? '☀️' : '🌙'}
+    </button>
+  </div>
+</header>
 
       <div className="container" style={{ paddingBottom: 40 }}>
         <div className="layout">

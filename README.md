@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Expense Tracker
 
 A full-stack expense tracking application built with Node.js + Express (backend) and React + Vite (frontend). This is my submission for **Exercise 2: Mini Expense Tracker** from the Studio Graphene Full Stack Developer Assessment.
@@ -183,3 +184,6 @@ Things I chose not to build given the time constraint, in priority order:
 ## Notes on AI Usage
 
 I used Claude (Anthropic) to assist with scaffolding this project. All code has been reviewed, understood, and can be explained line-by-line in the follow-up interview.
+=======
+# expense-tracker
+>>>>>>> f172f5cd899ea253100270ba486a5fc64f9ab176
