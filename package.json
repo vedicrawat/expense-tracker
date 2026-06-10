@@ -8,3 +8,6 @@
     "test": "cd server && npm test"
   }
 }
+"scripts": {
+  "start": "node src/index.js"
+}
