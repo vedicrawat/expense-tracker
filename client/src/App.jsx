@@ -6,12 +6,7 @@ import ExpenseList from './components/ExpenseList';
 import SummaryPanel from './components/SummaryPanel';
 import { EditModal, DeleteModal } from './components/Modals';
 
-const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark');
 
-useEffect(() => {
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-  localStorage.setItem('theme', dark ? 'dark' : 'light');
-}, [dark]);
 
 const RANGE_PRESETS = [
   { label: 'All Time', value: 'all' },
@@ -35,6 +30,12 @@ function getDateRange(preset) {
 }
 
 export default function App() {
+  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark');
+
+useEffect(() => {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}, [dark]);
   const [expenses, setExpenses] = useState([]);
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(false);
