@@ -1,17 +1,27 @@
-<<<<<<< HEAD
 # Expense Tracker
 
 A full-stack expense tracking application built with Node.js + Express (backend) and React + Vite (frontend). This is my submission for **Exercise 2: Mini Expense Tracker** from the Studio Graphene Full Stack Developer Assessment.
 
-Users can log daily spending across categories, filter by date and category, view a summary panel with a pie chart, and export their data as CSV.
+Users can log daily spending across categories, filter by date and category, view a summary panel with a pie chart, set monthly budgets per category, and export data as CSV.
 
 ---
 
 ## Live Demo
 
-> Add your deployed links here after deployment.
-> - **Frontend:** https://your-app.vercel.app
-> - **Backend:** https://your-api.railway.app
+- **Frontend:** https://expense-tracker-beta-red-43.vercel.app/
+- **Backend:** https://creative-truth-port.up.railway.app/
+
+---
+
+## Screenshots
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1695a2ea-f75d-4e0a-980b-554b91e3e161" />
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eac37326-bc0b-4b57-ba96-52d567218991" />
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/44ec7841-6e3c-4f95-a2a5-5109853dc4b7" />
+
+
 
 ---
 
@@ -32,9 +42,9 @@ Users can log daily spending across categories, filter by date and category, vie
 
 Assumes you have **Node.js 18+** installed.
 
-```bash
+
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/expense-tracker.git
+git clone https://github.com/vedicrawat/expense-tracker.git
 cd expense-tracker
 
 # 2. Install and start the backend
@@ -46,23 +56,23 @@ npm run dev        # runs on http://localhost:4000
 cd ../client
 npm install
 npm run dev        # runs on http://localhost:5173
-```
+
 
 Open http://localhost:5173 in your browser.
 
 **Environment variables (optional):**
-```bash
+
 # client/.env (copy from .env.example)
 VITE_API_URL=http://localhost:4000/api
-```
+
 
 **Run backend tests:**
-```bash
+
 cd server
 npm test
-```
 
----
+
+
 
 ## API Documentation
 
@@ -104,7 +114,7 @@ Response: `200 OK`
     "Entertainment": 200,
     "Other": 0
   },
-  "highestExpense": { ...expense object }
+  "highestExpense": { "...expense object" }
 }
 ```
 
@@ -152,6 +162,7 @@ expense-tracker/
 │   │       ├── ExpenseForm.jsx    # Add / edit form with validation
 │   │       ├── ExpenseList.jsx    # Expense rows + empty state
 │   │       ├── SummaryPanel.jsx   # Stats + pie chart
+│   │       ├── BudgetPanel.jsx    # Monthly budgets with progress bars
 │   │       └── Modals.jsx         # Edit and delete confirmation modals
 │   └── .env.example
 └── server/
@@ -170,20 +181,15 @@ expense-tracker/
 
 ## Next Steps
 
-Things I chose not to build given the time constraint, in priority order:
-
-1. **Authentication** — even a simple session/token would let multiple users track separately.
-2. **Budget per category** — a monthly budget limit with a visual warning bar when nearing the limit.
-3. **Drag-and-drop reordering** — would use `@dnd-kit/core`.
-4. **PostgreSQL / Prisma** — JSON file is fine for the assessment but wouldn't scale.
-5. **More chart types** — a monthly bar chart of spending over time would give useful trend visibility.
-6. **Debounced search** — filtering as-you-type by note text.
+1. **Authentication** — session/token to support multiple users
+2. **PostgreSQL / Prisma** — JSON file works but wouldn't scale
+3. **More chart types** — monthly bar chart for spending trends over time
+4. **Debounced search** — filter expenses by note text as you type
+5. **Drag-and-drop reordering** — using `@dnd-kit/core`
 
 ---
 
 ## Notes on AI Usage
 
 I used Claude (Anthropic) to assist with scaffolding this project. All code has been reviewed, understood, and can be explained line-by-line in the follow-up interview.
-=======
-# expense-tracker
->>>>>>> f172f5cd899ea253100270ba486a5fc64f9ab176
+```
