@@ -17,7 +17,12 @@ Users can log daily spending across categories, filter by date and category, vie
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1695a2ea-f75d-4e0a-980b-554b91e3e161" />
 
+
+
+
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eac37326-bc0b-4b57-ba96-52d567218991" />
+
+
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/44ec7841-6e3c-4f95-a2a5-5109853dc4b7" />
 
