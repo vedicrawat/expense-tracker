@@ -1,3 +1,4 @@
+import BudgetPanel from './components/BudgetPanel';
 import { useState, useEffect, useCallback } from 'react';
 import { api } from './api';
 import { CATEGORIES } from './utils';
